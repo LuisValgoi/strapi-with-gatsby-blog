@@ -3,9 +3,7 @@
 
 - To learn more about Gatsby and to integrate with `strapi`.
 
-# ℹ️ Reference
-
-This project was created following [this link here](https://www.gatsbyjs.com/blog/2018-1-18-strapi-and-gatsby/#1-introduction).
+- This project was created following [this link here](https://www.gatsbyjs.com/blog/2018-1-18-strapi-and-gatsby/#1-introduction).
 
 ## 🌳 Dependencies
 

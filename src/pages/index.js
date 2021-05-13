@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-export const PageQuery = graphql`  
+export const PageQuery = graphql`
   query IndexQuery {
     allStrapiArticle {
       edges {
@@ -42,20 +42,20 @@ const IndexPage = ({ data }) => (
       style={{ marginBottom: `1.45rem` }}
     />
     <ul>
-      {data.allStrapiArticle.edges.map((document) => (
+      {data.allStrapiArticle.edges.map(document => (
         <li key={document.node.id}>
           <h3>
             <Link to={`/${document.node.id}`}>{document.node.title}</Link>
           </h3>
           <p>{document.node.content}</p>
-          <Img fixed={document.node.image.childImageSharp.fixed}/>
+          <Img fixed={document.node.image.childImageSharp.fixed} />
         </li>
       ))}
     </ul>
     <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p> 
+    </p>
   </Layout>
 )
 

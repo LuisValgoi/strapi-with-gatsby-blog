@@ -3,22 +3,20 @@ import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 
-const ArticleTemplate = ({ data }) => {
-  return (
-    <Layout>
-      <Link to="/">Go to Home</Link> <br />
-      <h1>{data.strapiArticle.title}</h1>
-      <p>
-        by{" "}
-        <Link to={`/authors/User_${data.strapiArticle.author.id}`}>
-          {data.strapiArticle.author.username}
-        </Link>
-      </p>
-      <p>{data.strapiArticle.content}</p>
-      <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
-    </Layout>
-  )
-}
+const ArticleTemplate = ({ data }) => (
+  <Layout>
+    <Link to="/">Go to Home</Link> <br />
+    <h1>{data.strapiArticle.title}</h1>
+    <p>{data.strapiArticle.content}</p>
+    <Img fluid={data.strapiArticle.image.childImageSharp.fluid} />
+    <p>
+      by{" "}
+      <Link to={`/authors/User_${data.strapiArticle.author.id}`}>
+        {data.strapiArticle.author.username}
+      </Link>
+    </p>
+  </Layout>
+)
 
 export default ArticleTemplate
 
